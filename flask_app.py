@@ -3,6 +3,8 @@ from flask import Flask, render_template
 # Configure application
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("test.html")
+    if request.form.get("button")
+        return render_template("test.html")
+    return render_template("index.html")
